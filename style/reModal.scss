@@ -1,0 +1,206 @@
+@charset "utf-8";
+@import "variable";
+
+.reModalBox{
+  display: none;
+  position: fixed;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  z-index: 100000;
+  .title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+    background: #2898fd;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    padding: 0 15px;
+    font-family: "微软雅黑", "Open Sans", serif;
+    font-weight: bold;
+    position: relative;
+  }
+  .HCloseBtn{
+    width: 24px;
+    height: 24px;
+    line-height: 18px;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    span{
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      font-size: 30px;
+    }
+  }
+  .wrapper{
+    padding: 15px;
+    position: relative;
+  }
+  .btn-area{
+    padding: 10px 20px;
+    background: #f8f8f8;
+    position: relative;
+    .button{
+      cursor: pointer;
+      font-weight: normal;
+      line-height: normal;
+      position: relative;
+      text-decoration: none;
+      text-align: center;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      display: inline-block;
+      font-size: 12px;
+      padding: 5px 12px;
+      color: #ffffff;
+      transition: background-color 300ms ease-out;
+      border-radius: 2px;
+      float: right;
+      margin-left: 10px;
+    }
+    .reBtnSure{
+      background: #2898FD;
+      color: #fff;
+      border: 1px solid #2898FD;
+    }
+    .reBtnSecondary{
+      background: #e9e9e9;
+      border: 1px solid #e9e9e9;
+      color: #5e5e5e;
+    }
+  }
+}
+.reModalLay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+}
+
+#TB_overlayBG{
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: url(../images/reModalBg.png) repeat;
+}
+
+/*--------animate---------*/
+.animated {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes shake {
+  0%,100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+
+  10%,30%,50%,70%,90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px)
+  }
+
+  20%,40%,60%,80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px)
+  }
+}
+@keyframes shake {
+  0%,100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0)
+  }
+
+  10%,30%,50%,70%,90% {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px)
+  }
+
+  20%,40%,60%,80% {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px)
+  }
+}
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn
+}
+
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px)
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px)
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown
+}
